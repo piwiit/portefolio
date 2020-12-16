@@ -9,7 +9,9 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   # GET /projects/1.json
-  def show; end
+  def show
+    @project = Project.find(params[:id])
+  end
 
   # GET /projects/new
   def new
@@ -17,7 +19,9 @@ class ProjectsController < ApplicationController
   end
 
   # GET /projects/1/edit
-  def edit; end
+  def edit
+    set_project
+  end
 
   # POST /projects
   # POST /projects.json
@@ -43,7 +47,7 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1.json
   def update
     respond_to do |format|
-      if @project.update(project_params)
+      if set_project.update(project_params)
         format.html do
           redirect_to @project, notice: 'Project was successfully updated.'
         end
@@ -60,7 +64,7 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @project.destroy
+    set_project.destroy
     respond_to do |format|
       format.html do
         redirect_to projects_url, notice: 'Project was successfully destroyed.'
@@ -76,6 +80,6 @@ class ProjectsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def project_params
-    params.require(:project).permit(:title, :desciption, :url)
+    params.require(:project).permit(:title, :description, :url, :picture)
   end
 end
