@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-<% if @project.picture%>
-  <%=image_tag @project.picture_url %>
-<% end %>
+<p>
+  <%= cl_image_tag @project.picture.key if @project.picture.attached?%>
+</p>
 <p>
   <strong>Title:</strong>
   <%= @project.title %>
@@ -14,5 +14,4 @@
   <strong>Url:</strong>
   <%= @project.url %>
 </p>
-<%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
