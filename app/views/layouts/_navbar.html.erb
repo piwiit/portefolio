@@ -5,14 +5,15 @@
         <%=image_tag "https://res.cloudinary.com/dtevenab3/image/upload/v1608212768/115536698_653264105604624_4096573005137404116_n_srha9q_waegcd.png",class:"imagenav"%>
       <% end %>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </a>
-  <div class="follow">
-    <a href="https://github.com/piwiit"><i class="fab fa-github fa-2x mx-2 "></i></a>
-    <a href="https://twitter.com/PiwiitJo"><i class="fab fa-twitter-square fa-2x mx-2 "></i></a>
-    <a href="https://www.linkedin.com/in/jonathan-bouillaux-810b831a1/"><i class="fab fa-linkedin fa-2x mx-2 "></i></a>
+    <%if current_user%>
+      <%=link_to "déconexion",destroy_user_session_path, method:'DELETE', class:"text-white btn btn-warning my-3  d-none "%>
+    <% else %>
+      <%=link_to "Connexion",user_session_path, class:"text-white btn btn-nav m-auto  d-none " %>
+    <% end %>
+    <div class="follow">
+      <a href="https://github.com/piwiit"><i class="fab fa-github fa-2x mx-2 "></i></a>
+      <a href="https://twitter.com/PiwiitJo"><i class="fab fa-twitter-square fa-2x mx-2 "></i></a>
+      <a href="https://www.linkedin.com/in/jonathan-bouillaux-810b831a1/"><i class="fab fa-linkedin fa-2x mx-2 "></i></a>
+    </div>
   </div>
-</div>
 </nav>
