@@ -1,5 +1,5 @@
 i {
-  color: #ffc107;
+  color: #eb9d04;
 }
 
 div.field,
@@ -42,4 +42,16 @@ div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+.flag {
+  background: url("background.jpg") center top/cover;
+}
+
+.text-landing {
+  font-size: xx-large;
+  line-height: 1.5;
+}
+
+span {
+  color: #dc3545;
 }
