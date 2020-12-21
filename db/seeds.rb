@@ -9,5 +9,3 @@ User.destroy_all
 
 admin = User.new(email: 'bouillaux@hotmail.fr', password: 'azerty')
 admin.save!
-
-end
