@@ -1,6 +1,8 @@
 <%= render 'header'%>
 <%=render 'body'%>
-<%= link_to 'New Project', new_project_path,class:"btn btn-warning my-3 " %>
+<% if current_user %>
+  <%= link_to 'New Project', new_project_path,class:"btn btn-warning my-3 " %>
+<% end %>
 <div class="album py-5 bg-light">
   <div class="container">
     <div class="row justify-content-center">
