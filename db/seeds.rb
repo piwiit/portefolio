@@ -16,9 +16,9 @@ discotroc =
   Project.new(
     title: 'discotroc ',
     description:
-      "Vos goûts musicaux ont changé et vos vieux disques ne vous intéressent plus ? Vous pourriez les échanger.C'est exactement ce que nous vous proposons !Discotroc connecte les passionnés de musique et leurs disques à travers le monde. Votre discothèque devient virtuellement illimitée",
+      "Your musical tastes have changed and your old records no longer interest you? You could trade them in. That's exactly what we offer! Discotroc connects music lovers and their records across the world. Your nightclub becomes virtually unlimited",
     url: 'https://discotroc.herokuapp.com/'
-  ) #photo = "100_km.png"
+  )
 picture =
   URI.open(
     'https://res.cloudinary.com/dtevenab3/image/upload/v1608074578/discotroc.png'
