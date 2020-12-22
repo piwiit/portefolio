@@ -9,7 +9,7 @@
         <div class="col-lg-4 col-sm-12 portfolio-item rounded  ">
           <div class="card h-100 p-1 ">
             <% if project.picture.attached?%>
-              <%= image_tag project.picture,class:"card-img-top"%>
+              <%= cl_image_tag project.picture.key,class:"card-img-top"%>
             <% end %>
             <!-- Card content -->
             <div class="card-body p-1 bg-white rounded m-1">
