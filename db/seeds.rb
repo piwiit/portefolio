@@ -20,11 +20,4 @@ discotroc =
       "Your musical tastes have changed and your old records no longer interest you? You could trade them in. That's exactly what we offer! Discotroc connects music lovers and their records across the world. Your nightclub becomes virtually unlimited",
     url: 'https://discotroc.herokuapp.com/'
   )
-picture =
-  URI.open(
-    'https://res.cloudinary.com/dtevenab3/image/upload/v1608074578/discotroc.png'
-  )
-discotroc.picture.attach(
-  io: picture, filename: 'discotroc.png', content_type: 'image/png'
-)
 discotroc.save!

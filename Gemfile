@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 #mailing
 gem 'sendgrid-ruby'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -32,14 +33,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.15.1'
-gem 'carrierwave', '~> 2.0'
-gem "mini_magick"
 gem 'cloudinary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'dotenv-rails', groups: [:development, :test]
+  gem 'dotenv-rails'
 end
 
 group :development do
