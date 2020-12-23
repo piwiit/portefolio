@@ -2,7 +2,7 @@
 <main role="main ">
   <section class="jumbotron ">
     <h1 class="jumbotron-heading text-center"><%=@project.title%></h1>
-    <% if project.picture.attached?%>
+    <% if @project.picture.attached?%>
       <%= image_tag "discotroc.png",class:"card-img-top"%>
     <% end %>
     <ul class="list-group list-group-flush">
