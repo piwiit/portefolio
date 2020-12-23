@@ -1813,6 +1813,11 @@ chalk@^2.0, chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
+checkbox-radio@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/checkbox-radio/-/checkbox-radio-1.1.1.tgz#034cb9b5ec932b2e450a04a72f56a95b300dabd4"
+  integrity sha1-A0y5teyTKy5FCgSnL1apWzANq9Q=
+
 chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
@@ -6954,6 +6959,12 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+"t-scroll@github:crazychicken/t-scroll":
+  version "1.1.10"
+  resolved "https://codeload.github.com/crazychicken/t-scroll/tar.gz/a0e721f2e641fcae3f22b242e384d892fdd0d6e6"
+  dependencies:
+    checkbox-radio "^1.1.0"
 
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"

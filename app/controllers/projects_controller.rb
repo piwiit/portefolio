@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    @message = Message.new
   end
 
   # GET /projects/1/edit
@@ -27,7 +28,17 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
+    @message = Message.new message_params
+    if @message.valid?
+      MessageMailer.contact(@message).deliver_now
+      redirect_to new_message_url
+      flash[:notice] =
+        'We have received your message and will be in touch soon!'
+    else
+      flash[:notice] =
+        'There was an error sending your message. Please try again.'
+      render :new
+    end
     respond_to do |format|
       if @project.save
         format.html do
@@ -81,5 +92,8 @@ class ProjectsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def project_params
     params.require(:project).permit(:title, :description, :url, :picture)
+  end
+  def message_params
+    params.require(:message).permit(:name, :email, :phone_number, :body)
   end
 end

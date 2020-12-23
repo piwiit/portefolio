@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :messages, only: %i[new create] do
+    post 'contact_mailer'
+  end
+
   resources :languages
   resources :projects
   devise_for :users
