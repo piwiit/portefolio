@@ -2,9 +2,9 @@
 <main role="main ">
   <section class="jumbotron ">
     <h1 class="jumbotron-heading text-center"><%=@project.title%></h1>
-    <%if @project.picture.attached?%>
-      <%= cl_image_tag project.picture.key,class:"card-img-top"%>
-    <% end%>
+    <% if project.picture.attached?%>
+      <%= image_tag "discotroc.png",class:"card-img-top"%>
+    <% end %>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><i class="fas fa-stream"></i> : <%=@project.description%></li>
       <li class="list-group-item"><%=link_to "accéder au site" ,@project.url ,class:"btn btn-warning"%> <%= link_to 'retour', projects_path ,class:"btn btn-warning"%></li>
